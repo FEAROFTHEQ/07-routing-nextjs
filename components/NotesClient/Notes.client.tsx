@@ -59,7 +59,7 @@ export default function NoteClient() {
               Create note +
             </button>
             {isModal && (
-              <Modal onClose={closeModal}>
+              <Modal>
                 <NoteForm setPage={setPage} closeModal={closeModal} />
               </Modal>
             )}
