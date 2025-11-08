@@ -5,11 +5,11 @@ import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { useDebouncedCallback } from "use-debounce";
 import css from "./NotesClient.module.css";
-import NoteList from "../NoteList/NoteList";
-import Pagination from "../Pagination/Pagination";
-import Modal from "../Modal/Modal";
-import NoteForm from "../NoteForm/NoteForm";
-import SearchBox from "../SearchBox/SearchBox";
+import NoteList from "../../../../components/NoteList/NoteList";
+import Pagination from "../../../../components/Pagination/Pagination";
+import Modal from "../../../../components/Modal/Modal";
+import NoteForm from "../../../../components/NoteForm/NoteForm";
+import SearchBox from "../../../../components/SearchBox/SearchBox";
 import { useParams } from "next/navigation";
 import ALL_NOTES from "@/lib/all";
 
