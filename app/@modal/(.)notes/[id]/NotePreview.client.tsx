@@ -3,6 +3,7 @@ import { useParams, useRouter } from "next/navigation";
 import css from "./NotePreview.module.css";
 import { fetchNoteById } from "@/lib/api";
 import { useQuery } from "@tanstack/react-query";
+import Modal from "@/components/Modal/Modal";
 
 export default function NotePreviewClient() {
   const router = useRouter();
@@ -17,7 +18,7 @@ export default function NotePreviewClient() {
     refetchOnMount: false,
   });
   return (
-    <>
+    <Modal>
       {isLoading && <p>Loading, please wait...</p>}
       {error && !note && <p>Something went wrong.</p>}
       {!isLoading && !error && note && (
@@ -37,6 +38,6 @@ export default function NotePreviewClient() {
           </button>
         </div>
       )}
-    </>
+    </Modal>
   );
 }
